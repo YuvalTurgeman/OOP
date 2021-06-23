@@ -129,14 +129,4 @@ public class DynamicArray <T> implements List <T> {
         return new DynamicArrayIterator<T>(this);
     }
 
-
-    public static void main(String[] args) {
-        DynamicArray <Integer> a = new DynamicArray<Integer>();
-        a.add(5);
-        a.add(3);
-        a.add(6);
-        a.add(10);
-        a.remove(2);
-        System.out.println(a.toString());
-    }
 }
