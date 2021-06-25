@@ -100,6 +100,7 @@ public class DynamicArray <T> implements List <T> {
                 data[i] = data[i + 1];
         }
         data[size() - 1] = null;
+        size--;
         return;
     }
 
@@ -107,10 +108,11 @@ public class DynamicArray <T> implements List <T> {
         if(index >= size() || index<0) {
             throw new IndexOutOfBoundsException();
         }
+        T tmp = (T)data[index];
         for(int i = index; i<size();i++)
             data[i] = data[i+1];
-        T tmp = (T)data[index];
         data[size()-1] = null;
+        size--;
         return tmp;
     }
 
